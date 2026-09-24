@@ -1,0 +1,2 @@
+SELECT feeds FROM challenge_categories 
+WHERE name = {{this.params.category}};

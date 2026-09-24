@@ -1,0 +1,2 @@
+DELETE FROM youtube_feeds
+WHERE id = {{ this.params.id }};

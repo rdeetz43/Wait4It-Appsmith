@@ -1,0 +1,10 @@
+SELECT u.first_name AS "User Name",  -- the name from Users
+			 f.id AS "ID",
+			 f.rating AS "Rating",
+			 f.comments AS "Comments",
+			 f.submitted_at AS "Submitted On",
+			 f.user_id AS "User Id"
+FROM 
+		public.feedback f
+JOIN 
+    public.users u ON f.user_id = u.id;

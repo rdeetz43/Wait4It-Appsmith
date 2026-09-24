@@ -1,0 +1,5 @@
+{
+  "service": "{{ this.params.service }}",
+  "action": "{{ this.params.action }}",
+  "debug": "{{ this.params.debug }}"
+}

@@ -1,0 +1,14 @@
+SELECT 
+	first_name AS "User Name", 
+	email AS "Email", 
+	birthdate AS "Birthday", 
+	phone AS "Phone Number", 
+	address AS "Address", 
+	city AS "City", 
+	state AS "State", 
+	zip AS "Zip Code", 
+	status AS "Status",
+	user_type AS "User Type",
+	id AS "ID"
+FROM public.users
+ORDER BY email ASC;

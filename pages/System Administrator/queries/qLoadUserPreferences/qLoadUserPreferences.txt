@@ -1,0 +1,7 @@
+SELECT 
+  p.category_id,
+  c.name AS category_name,
+  p.weight
+FROM user_preferences p
+JOIN challenge_categories c ON c.id = p.category_id
+WHERE p.user_id = {{ this.params.user_id }};

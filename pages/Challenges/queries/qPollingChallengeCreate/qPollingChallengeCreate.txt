@@ -1,0 +1,24 @@
+INSERT INTO public.polling_challenges (
+  active,
+  name,
+  question_text,
+  category,
+  seasonal_start,
+  seasonal_end,
+  options
+)
+VALUES (
+  {{ switchPollEnabled.isSwitchedOn }},
+  {{ inpPollName.text }},
+  {{ selPollQuestion.text }},
+  {{ selPollCategory.selectedOptionValue }},
+  {{
+    JSON.stringify([
+      inpPollPred1.text,
+      inpPollPred2.text,
+      inpPollPred3.text,
+      inpPollPred4.text,
+    ].filter(Boolean))
+  }}::jsonb
+)
+RETURNING id;

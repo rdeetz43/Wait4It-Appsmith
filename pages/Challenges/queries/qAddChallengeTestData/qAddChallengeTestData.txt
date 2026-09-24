@@ -1,0 +1,12 @@
+INSERT INTO challenges
+  (id, topic, source, created_at, categories, popularity_score, expiration_time, status, audit_log)
+VALUES
+  ({{this.params.challenge.id}},
+   {{this.params.challenge.topic}},
+   {{this.params.challenge.source}},
+   {{this.params.challenge.created_at}},
+   {{this.params.challenge.categories}},
+   {{this.params.challenge.popularity_score}},
+   {{this.params.challenge.expiration_time}},
+   {{this.params.challenge.status}},
+   {{this.params.challenge.audit_log}});

@@ -1,0 +1,1 @@
+SELECT code, label FROM billing_cycles ORDER BY label;

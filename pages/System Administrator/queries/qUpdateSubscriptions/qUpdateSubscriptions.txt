@@ -1,0 +1,7 @@
+UPDATE public.subscriptions
+SET user_id = {{selSubUser.selectedOptionValue}},
+	  plan = {{selSubPlan.selectedOptionValue}},
+		billing_cycle = {{selSubBilling.selectedOptionValue}},
+		status = {{selSubStatus.selectedOptionValue}},
+		auto_renew = {{chkAutoRenew.isChecked}}
+WHERE id = {{appsmith.store.editRow.ID}};

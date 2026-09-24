@@ -1,0 +1,7 @@
+SELECT
+  code AS "Code",
+  label AS "Label",
+	category AS "Category",
+	description AS "Description"
+FROM
+  public.emotions

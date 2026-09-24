@@ -1,0 +1,1 @@
+SELECT code, label FROM social_platforms ORDER BY label;

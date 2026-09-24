@@ -1,0 +1,3 @@
+SELECT *
+FROM public."gpt_prompts"
+WHERE prompt_key = {{this.params.type}} || '.' || {{this.params.category}};

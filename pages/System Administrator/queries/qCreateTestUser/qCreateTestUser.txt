@@ -1,0 +1,35 @@
+INSERT INTO users (
+  first_name,
+  email,
+  city,
+  state,
+  zip,
+  address,
+  birthdate,
+  phone,
+  ssn,
+  twitter_url,
+  linkedin_url,
+  reddit_url,
+  facebook_url,
+  instagram_url,
+  tiktok_url
+)
+VALUES (
+  {{ this.params.name }},
+  {{ this.params.email }},
+  {{ this.params.city }},
+  {{ this.params.state }},
+  {{ this.params.zip }},
+  {{ this.params.address }},
+  {{ this.params.birthdate }},
+  {{ this.params.phone }},
+  {{ this.params.ssn }},
+  {{ this.params.twitter_url }},
+  {{ this.params.linkedin_url }},
+  {{ this.params.reddit_url }},
+  {{ this.params.facebook_url }},
+  {{ this.params.instagram_url }},
+  {{ this.params.tiktok_url }}
+)
+RETURNING *;

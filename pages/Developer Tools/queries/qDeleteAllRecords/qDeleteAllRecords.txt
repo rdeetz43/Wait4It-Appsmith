@@ -1,0 +1,1 @@
+TRUNCATE {{ this.params.table }} CASCADE;

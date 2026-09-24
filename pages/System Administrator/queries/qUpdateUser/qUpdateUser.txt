@@ -1,0 +1,15 @@
+UPDATE public.users
+SET first_name     = '{{inpUserName.text}}',
+    email          = '{{inpUserEmail.text}}',
+    phone          = '{{inpUserPhone.text}}',
+    address        = '{{inpUserAddress.text}}',
+    city           = '{{inpUserCity.text}}',
+    state          = '{{inpUserState.selectedOptionValue}}',
+    zip            = '{{inpUserZip.text}}',
+    facebook_url   = NULLIF('{{inpUserFacebook.text}}', ''),
+    instagram_url  = NULLIF('{{inpUserInstagram.text}}', ''),
+    tiktok_url     = NULLIF('{{inpUserTikTok.text}}', ''),
+    twitter_url    = NULLIF('{{inpUserTwitter.text}}', ''),
+    birthdate      = '{{DatePicker1.selectedDate}}',
+		status				 = '{{selUserStatus.selectedOptionValue}}'
+WHERE id = {{appsmith.store.editRow.id}};

@@ -1,0 +1,72 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 82,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  apiChallengeGetCycleCount.data.cycle_count ))(selChallengeCycleCount.options, selChallengeCycleCount.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "g84lzoa1co",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 32,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 84,
+  "mobileLeftColumn": 28,
+  "mobileRightColumn": 48,
+  "mobileTopRow": 77,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{ apiChallengeSetCycleCount.run() }}",
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 82,
+  "originalTopRow": 78,
+  "parentColumnSpace": 21,
+  "parentId": "tt35d0s5kf",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 43,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"Continuously (0)\",\n    \"code\": 0\n  },\n  {\n    \"name\": \"1 Cycle\",\n    \"code\": 1\n  },\n  {\n    \"name\": \"2 Cycles\",\n    \"code\": 2\n  },\n  {\n    \"name\": \"3 Cycles\",\n    \"code\": 3\n  },\n  {\n    \"name\": \"4 Cycles\",\n    \"code\": 4\n  },\n  {\n    \"name\": \"5 Cycles\",\n    \"code\": 5\n  },\n  {\n    \"name\": \"6 Cycles\",\n    \"code\": 6\n  },\n  {\n    \"name\": \"7 Cycles\",\n    \"code\": 7\n  },\n  {\n    \"name\": \"8 Cycles\",\n    \"code\": 8\n  },\n  {\n    \"name\": \"9 Cycles\",\n    \"code\": 9\n  },\n  {\n    \"name\": \"10 Cycles\",\n    \"code\": 10\n  },\n  {\n    \"name\": \"11 Cycles\",\n    \"code\": 11\n  },\n  {\n    \"name\": \"12 Cycles\",\n    \"code\": 12\n  },\n  {\n    \"name\": \"13 Cycles\",\n    \"code\": 13\n  },\n  {\n    \"name\": \"14 Cycles\",\n    \"code\": 14\n  },\n  {\n    \"name\": \"15 Cycles\",\n    \"code\": 15\n  },\n  {\n    \"name\": \"20 Cycles\",\n    \"code\": 20\n  },\n  {\n    \"name\": \"30 Cycles\",\n    \"code\": 30\n  },\n  {\n    \"name\": \"40 Cycles\",\n    \"code\": 40\n  },\n  {\n    \"name\": \"50 Cycles\",\n    \"code\": 50\n  },\n  {\n    \"name\": \"100 Cycles\",\n    \"code\": 100\n  }\n]",
+  "topRow": 78,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "1fmgvighc1",
+  "widgetName": "selChallengeCycleCount"
+}

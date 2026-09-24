@@ -1,0 +1,63 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 41,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ apiServiceStatus.data.ingest.status === \"stopped\" }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "4sfiobih32",
+  "leftColumn": 34,
+  "minWidth": 120,
+  "mobileBottomRow": 41,
+  "mobileLeftColumn": 34,
+  "mobileRightColumn": 50,
+  "mobileTopRow": 37,
+  "needsErrorInfo": false,
+  "onClick": "{{\n    apiServiceStopStart.run({\n        service: 'ingest',\n        action: \"stop\"\n    }).then(() => {\n        showAlert(\"Stopping ingest service...\", \"info\");\n        apiServiceStatus.run();\n    })\n}}",
+  "originalBottomRow": 41,
+  "originalTopRow": 37,
+  "parentColumnSpace": 6.77734375,
+  "parentId": "8n1uwtgbrg",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 50,
+  "text": "Stop",
+  "topRow": 37,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "oei3ih5bzx",
+  "widgetName": "Button3Copy"
+}

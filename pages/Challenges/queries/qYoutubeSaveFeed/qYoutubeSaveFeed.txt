@@ -1,0 +1,8 @@
+INSERT INTO youtube_feeds
+  (channel_id, source_name, notes, enabled, category)
+VALUES
+  ({{ this.params.channel_id }},
+   {{ this.params.source_name }},
+   {{ this.params.notes }},
+   {{ this.params.enabled }},
+   {{ this.params.category }});

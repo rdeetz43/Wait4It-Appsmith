@@ -1,0 +1,4 @@
+SELECT id, ingest_challenge_id, source, topic, status, rule_id
+FROM active_challenges
+WHERE source NOT LIKE 'WackyPulse:%'
+ORDER BY created_at ASC;

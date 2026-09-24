@@ -1,0 +1,16 @@
+SELECT u.first_name AS "User Name",
+		 	 p.id AS "ID",
+	 		 sp.label AS "Social Platform",
+			 pe.label AS "Predicted Emotion",
+			 p.content_id AS "Content",
+			 p.confidence_score AS "Confidence Score",
+			 p.prediction_time AS "Prediction Time",
+			 p.user_id AS "User Id"
+FROM 
+		public.emotion_predictions p
+JOIN 
+    public.users u ON p.user_id = u.id
+LEFT JOIN
+    public.social_platforms sp ON p.social_platform::TEXT = sp.code
+LEFT JOIN
+    public.emotions pe ON p.predicted_emotion::TEXT = pe.code;

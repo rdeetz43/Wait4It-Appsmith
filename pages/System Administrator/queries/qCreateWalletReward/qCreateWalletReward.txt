@@ -1,0 +1,2 @@
+INSERT INTO public.reward_history (wallet_id, points_awarded, reason, awarded_at)
+VALUES ({{this.params.wallet_id}}, {{this.params.coins}}, '{{this.params.reason}}', '{{this.params.date}}');

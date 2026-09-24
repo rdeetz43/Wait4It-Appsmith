@@ -1,0 +1,14 @@
+{
+  "model": "gpt-4",
+  "messages": [
+    {
+      "role": "user",
+			"content": "Generate a random floating point number between 0 and 5. Return only the result as JSON using the following exact keys:
+
+- confidence_score
+
+Do not include any explanation or extra text. Just return the JSON."
+    }
+  ],
+  "temperature": 0.7
+}

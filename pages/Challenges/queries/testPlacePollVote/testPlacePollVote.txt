@@ -1,0 +1,4 @@
+{
+  "challenge_id": "{{this.params.challenge_id}}",
+  "user_id": "{{this.params.user_id}}"
+}

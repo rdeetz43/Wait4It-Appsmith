@@ -1,0 +1,25 @@
+{
+  "appIsExample": false,
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#F3F1C7",
+  "evaluationVersion": 2,
+  "pages": [
+    {
+      "id": "Challenges",
+      "isDefault": true
+    },
+    {
+      "id": "Developer Tools",
+      "isDefault": false
+    },
+    {
+      "id": "System Administrator",
+      "isDefault": false
+    },
+    {
+      "id": "Dashboard",
+      "isDefault": false
+    }
+  ]
+}

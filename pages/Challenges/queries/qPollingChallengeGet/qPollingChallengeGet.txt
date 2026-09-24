@@ -1,0 +1,3 @@
+SELECT * 
+FROM public."polling_challenges"
+WHERE id = {{tablePollingChallenges.triggeredRow.id}};

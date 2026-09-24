@@ -1,0 +1,8 @@
+TRUNCATE TABLE
+  bets,
+  subscriptions,
+  feedback,
+  user_preferences,
+  user_points,
+  users
+RESTART IDENTITY;

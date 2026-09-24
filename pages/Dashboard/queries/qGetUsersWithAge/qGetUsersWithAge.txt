@@ -1,0 +1,7 @@
+-- Query name: getUsersWithAge
+SELECT id,
+       email,
+       birthdate,
+       DATE_PART('year', age(CURRENT_DATE, birthdate))::int AS age
+FROM users
+WHERE birthdate IS NOT NULL;

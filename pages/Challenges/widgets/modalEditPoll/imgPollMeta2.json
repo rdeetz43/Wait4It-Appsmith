@@ -1,0 +1,42 @@
+{
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 76,
+  "boxShadow": "none",
+  "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "image"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "enableDownload": false,
+  "enableRotation": false,
+  "flexVerticalAlignment": "start",
+  "image": "{{ appsmith.store.pollingChallengeImageUrlMeta2 + \"?v=\" +  \nDate.now() }}",
+  "imageShape": "RECTANGLE",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0mim8qon1f",
+  "leftColumn": 48,
+  "maxZoomLevel": 1,
+  "mobileBottomRow": 52,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 59,
+  "mobileTopRow": 40,
+  "needsErrorInfo": false,
+  "objectFit": "contain",
+  "parentColumnSpace": 20.5625,
+  "parentId": "a3wcp7e84x",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 60,
+  "topRow": 63,
+  "type": "IMAGE_WIDGET",
+  "version": 1,
+  "widgetId": "ux6e1wt000",
+  "widgetName": "imgPollMeta2"
+}

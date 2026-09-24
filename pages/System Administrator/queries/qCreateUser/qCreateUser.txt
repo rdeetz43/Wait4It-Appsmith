@@ -1,0 +1,36 @@
+INSERT INTO public.users (
+  first_name,
+  email,
+  phone,
+  address,
+  city,
+  state,
+	zip,
+	birthdate,
+	created_at,
+	ssn,
+  facebook_url,
+  instagram_url,
+  tiktok_url,
+  twitter_url,
+	linkedin_url,
+	reddit_url
+)
+VALUES (
+  {{inpUserName.text}},
+  {{inpUserEmail.text}},
+  {{inpUserPhone.text}},
+  {{inpUserAddress.text}},
+  {{inpUserCity.text}},
+  {{inpUserState.selectedOptionValue}},
+  {{inpUserZip.text}},
+	{{DatePicker1.formattedDate}},
+	{{moment.parseZone(inpUserCreated.text).format("YYYY-MM-DDTHH:mm:ssZ")}},
+	{{inpUserSsn.text}},
+  {{inpUserFacebook.text}},
+  {{inpUserInstagram.text}},
+  {{inpUserTikTok.text}},
+  {{inpUserTwitter.text}},
+	{{inpUserLinkedIn.text}},
+	{{inpUserReddit.text}}
+);

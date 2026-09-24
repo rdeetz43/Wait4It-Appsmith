@@ -1,0 +1,33 @@
+INSERT INTO public.challenge_videos (
+  enabled,
+  url,
+  source_video_id,
+  image_url,
+  topic,
+  snippet,
+  question,
+  category,
+  answer_a,
+  answer_b,
+  answer_c,
+  answer_d,
+  correct_answer,
+  pause_timestamp
+)
+VALUES (
+  {{ switchVideoEnabled.isSwitchedOn }},
+  '{{ inpVideoUrl.text }}',
+  split_part('{{ inpVideoUrl.text }}', '/video/', 2),
+  '{{ inpThumbnailUrl.text }}',
+  '{{ inpVideoTopic.text }}',
+  '{{ inpVideoSnippet.text }}',
+  '{{ inpVideoQuestion.text }}',
+  '{{ selVideoCategory.selectedOptionValue }}',
+  '{{ inpVideoPred1.text }}',
+  '{{ inpVideoPred2.text }}',
+  '{{ inpVideoPred3.text }}',
+  '{{ inpVideoPred4.text }}',
+  '{{ selCorrectAnswer.selectedOptionValue }}',
+  '{{ inpPauseTime.text }}'
+)
+RETURNING id;

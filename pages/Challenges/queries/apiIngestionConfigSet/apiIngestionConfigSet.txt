@@ -1,0 +1,8 @@
+{
+  "start": {
+    "ingestion_start_time": {{ selIngestCycleStartTime.selectedOptionValue }}
+  },
+  "interval": {
+    "ingestion_interval_hours": {{ Number(selIngestCycle.selectedOptionValue) }}
+  }
+}

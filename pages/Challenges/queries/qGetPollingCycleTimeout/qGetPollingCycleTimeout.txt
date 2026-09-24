@@ -1,0 +1,4 @@
+SELECT open_period_ms
+FROM challenge_rule_defaults
+WHERE source = 'polling'
+LIMIT 1;

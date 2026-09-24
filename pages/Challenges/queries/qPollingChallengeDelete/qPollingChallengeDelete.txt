@@ -1,0 +1,2 @@
+DELETE FROM public."polling_challenges"
+WHERE id = {{tablePollingChallenges.selectedRow.id}};

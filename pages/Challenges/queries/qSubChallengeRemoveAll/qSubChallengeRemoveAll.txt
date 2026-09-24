@@ -1,0 +1,2 @@
+TRUNCATE public."generated_subchallenge" CASCADE;
+TRUNCATE public."active_subchallenges" CASCADE;

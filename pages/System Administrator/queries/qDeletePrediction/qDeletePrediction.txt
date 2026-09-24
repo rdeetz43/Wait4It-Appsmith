@@ -1,0 +1,1 @@
+DELETE FROM public.emotion_predictions WHERE id = {{this.params.id}};

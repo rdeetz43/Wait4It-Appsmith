@@ -1,0 +1,2 @@
+INSERT INTO user_preferences (user_id, category_id, weight)
+VALUES ({{this.params.user_id}}, {{this.params.category_id}}, {{this.params.weight}});

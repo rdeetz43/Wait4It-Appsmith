@@ -1,0 +1,3 @@
+UPDATE challenge_categories
+SET feeds = {{ this.params.feedsJson }}::jsonb
+WHERE name = {{this.params.category}};

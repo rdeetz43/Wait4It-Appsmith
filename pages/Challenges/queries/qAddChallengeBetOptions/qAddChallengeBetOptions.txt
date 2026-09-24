@@ -1,0 +1,4 @@
+INSERT INTO challenge_bet_options
+  (id, challenge_id, emotion, odds)
+VALUES
+  ({{this.params.option.id}}, {{this.params.option.challenge_id}}, {{this.params.option.emotion}}, {{this.params.option.odds}});

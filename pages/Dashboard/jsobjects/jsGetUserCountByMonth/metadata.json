@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6aaf05fd9bac554080bd71bc_6aa0d126-9538-41b1-ad35-38fede90b0c6",
+  "id": "Dashboard_jsGetUserCountByMonth",
+  "unpublishedCollection": {
+    "name": "jsGetUserCountByMonth",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

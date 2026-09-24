@@ -1,0 +1,15 @@
+{
+  "model": "gpt-4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Generate a realistic rewards info for a mobile game including points seelcted randomly between 1 and 100 and reason why user earned those points. Return the result as JSON using the following exact keys:
+
+- points_awarded
+- reason
+
+Ensure the JSON keys match exactly and the values are realistic."
+    }
+  ],
+  "temperature": 0.7
+}

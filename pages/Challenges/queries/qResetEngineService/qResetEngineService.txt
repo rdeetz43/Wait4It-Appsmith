@@ -1,0 +1,7 @@
+UPDATE engine_state
+SET cycle_id = NULL,
+    cycle_type = NULL,
+    stage = NULL,
+    manual_restart = false,
+    heartbeat_at = NOW()
+WHERE id = 1;

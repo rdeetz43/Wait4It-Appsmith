@@ -1,0 +1,16 @@
+INSERT INTO public.emotion_predictions (
+  user_id,
+  social_platform,
+  content_id,
+	predicted_emotion,
+	confidence_score,
+  prediction_time
+)
+VALUES (
+	{{selPredUser.selectedOptionValue}},
+  {{selPredSocial.selectedOptionValue}},
+	{{inpPredContentId.text}},
+	{{selPredEmotion.selectedOptionValue}},
+  {{inpPredConfidence.text}},
+  {{moment.parseZone(txtFeedSubmit.text).format("YYYY-MM-DDTHH:mm:ssZ")}}
+);

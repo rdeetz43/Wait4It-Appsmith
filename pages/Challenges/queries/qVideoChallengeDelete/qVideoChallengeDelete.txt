@@ -1,0 +1,2 @@
+DELETE FROM public."challenge_videos"
+WHERE id = {{tableVideoChallenges.selectedRow.id}};

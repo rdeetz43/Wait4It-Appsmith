@@ -1,0 +1,7 @@
+SELECT
+  id,
+  label,
+  sequence
+FROM active_subchallenge_options
+WHERE subchallenge_id = '{{this.params.subchallenge_id}}'
+ORDER BY sequence ASC;

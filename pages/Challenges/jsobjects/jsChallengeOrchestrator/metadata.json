@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "6aaf05fd9bac554080bd71bc_f7b3e621-0c28-4fed-ab37-66af42af4373",
+  "id": "Challenges_jsChallengeOrchestrator",
+  "unpublishedCollection": {
+    "name": "jsChallengeOrchestrator",
+    "pageId": "Challenges",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "dataWatcherId",
+        "value": "null"
+      },
+      {
+        "name": "EMPTY_UUID",
+        "value": "\"00000000-0000-0000-0000-000000000000\""
+      },
+      {
+        "name": "_pollTickerStarted",
+        "value": "false"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+UPDATE public.emotion_predictions
+SET user_id = {{selPredUser.selectedOptionValue}},
+		predicted_emotion = {{selPredEmotion.selectedOptionValue}},
+    confidence_score = {{inpPredConfidence.text}},
+		social_platform = {{selPredSocial.selectedOptionValue}},
+		content_id = {{inpPredContentId.text}}
+WHERE id = {{appsmith.store.editRow.ID}};

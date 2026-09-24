@@ -1,0 +1,7 @@
+UPDATE public.transactions
+SET wallet_id = {{this.params.wallet_id}},
+    amount = {{this.params.amount}},
+    type = '{{this.params.type}}',
+    transaction_date = '{{this.params.transaction_date}}',
+    description = '{{this.params.description}}'
+WHERE id = '{{this.params.id}}';

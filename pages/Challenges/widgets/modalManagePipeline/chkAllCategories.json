@@ -1,0 +1,54 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "RIGHT",
+  "animateLoading": true,
+  "bottomRow": 54,
+  "boxShadow": "none",
+  "defaultSwitchState": true,
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onChange"
+    }
+  ],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "56atmrs4kh",
+  "label": "Force one challenge per category",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextSize": "1rem",
+  "leftColumn": 5,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 59,
+  "mobileLeftColumn": 12,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 55,
+  "needsErrorInfo": false,
+  "onChange": "{{ apiCategoryQuotasSet.run(() => apiCategoryQuotasGet.run()) }}",
+  "originalBottomRow": 60,
+  "originalTopRow": 55,
+  "parentColumnSpace": 15.875,
+  "parentId": "iwq6xu34n2",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 25,
+  "topRow": 50,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "ipkm2seang",
+  "widgetName": "chkAllCategories"
+}

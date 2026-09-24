@@ -1,0 +1,11 @@
+SELECT 
+  p.category_id,
+  c.name AS category_name,
+  p.weight,
+  p.created_at
+FROM user_preferences p
+JOIN challenge_categories c 
+  ON c.id = p.category_id
+WHERE p.user_id = '664ed1a4-9093-41fb-8b90-eea486aa00d5';
+--WHERE p.user_id = {{ appsmith.store.selectedUserId }};
+--664ed1a4-9093-41fb-8b90-eea486aa00d5

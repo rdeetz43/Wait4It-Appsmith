@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6aaf05fd9bac554080bd71bc_21a7e8d7-d524-47d5-ad90-d6a5a4f370c4",
+  "id": "Challenges_jsGetChallenges",
+  "unpublishedCollection": {
+    "name": "jsGetChallenges",
+    "pageId": "Challenges",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

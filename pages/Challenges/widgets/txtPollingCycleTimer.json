@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 135,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "5yi1g8paj4",
+  "leftColumn": 39,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 135,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 55,
+  "mobileTopRow": 131,
+  "needsErrorInfo": false,
+  "originalBottomRow": 135,
+  "originalTopRow": 131,
+  "overflow": "NONE",
+  "parentColumnSpace": 30.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 53,
+  "shouldTruncate": false,
+  "text": "{{\n  (() => {\n    appsmith.store.pollTick; // forces re-evaluation every second\n\n    const end = appsmith.store.pollingEndTime;\n\n    // No cycle has been started yet\n    if (!end) return \"- No Polls in Progress -\";\n\n    const ms = jsChallengeOrchestrator.getPollingRemaining();\n\n    // Cycle reached zero\n    if (ms <= 0) return \"Polling Cycle Ended\";\n\n    const seconds = Math.floor(ms / 1000) % 60;\n    const minutes = Math.floor(ms / 60000);\n\n    return `Poll Cycle Countdown: ${minutes}m ${seconds.toString().padStart(2, \"0\")}s`;\n  })()\n}}\n",
+  "textAlign": "CENTER",
+  "textColor": "#231F20",
+  "topRow": 131,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "bxkti27ewi",
+  "widgetName": "txtPollingCycleTimer"
+}

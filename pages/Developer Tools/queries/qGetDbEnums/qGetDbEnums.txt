@@ -1,0 +1,9 @@
+SELECT
+  t.typname AS "Type",
+  e.enumlabel AS "Value",
+  e.enumsortorder AS "Order"
+FROM pg_type t
+JOIN pg_namespace n ON n.oid = t.typnamespace
+JOIN pg_enum e ON e.enumtypid = t.oid
+WHERE t.typtype = 'e'
+ORDER BY t.typname, e.enumsortorder;

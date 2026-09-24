@@ -1,0 +1,4 @@
+{
+  "payout_rule_id": "{{ tableChallengeDefaults.triggeredRow.payout_rule_id }}",
+	"open_period_ms": "{{ tableChallengeDefaults.triggeredRow.open_period_ms }}" 
+}

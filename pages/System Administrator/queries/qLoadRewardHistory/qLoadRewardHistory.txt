@@ -1,0 +1,11 @@
+SELECT --u.first_name AS "User Name",
+			 r.wallet_id,
+		 	 r.id AS "ID",
+			 r.points_awarded AS "Coins Awarded",
+			 r.reason AS "Reason",
+			 r.awarded_at AS "Awarded On"
+FROM 
+		public.reward_history r
+JOIN 
+    public.wallets u ON r.wallet_id = u.id
+WHERE r.wallet_id = {{this.params.wallet_id}};

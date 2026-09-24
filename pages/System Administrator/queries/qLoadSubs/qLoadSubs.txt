@@ -1,0 +1,21 @@
+SELECT 
+    u.first_name AS "User Name",  -- the name from Users
+    s.id AS "ID",
+    sp.label AS "Plan",
+    ss.label AS "Status",
+		bc.label AS "Billing Cycle",
+		s.start_date AS "Start Date",
+		s.end_date AS "End Date",
+		s.auto_renew AS "Auto-Renew",
+		s.created_at AS "Created On",
+		s.user_id AS "User Id"
+FROM 
+    public.subscriptions s
+JOIN 
+    public.users u ON s.user_id = u.id
+JOIN
+    public.subscription_status ss ON s.status::TEXT = ss.code
+JOIN
+    public.subscription_plans sp ON s.plan::TEXT = sp.code
+JOIN
+    public.billing_cycles bc ON s.billing_cycle::TEXT = bc.code;

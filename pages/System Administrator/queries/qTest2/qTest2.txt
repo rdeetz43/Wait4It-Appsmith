@@ -1,0 +1,14 @@
+INSERT INTO reward_history (
+  user_id,
+  points_awarded,
+  reason,
+  awarded_at
+)
+VALUES
+  (8, 50, 'Referral bonus', NOW() - INTERVAL '10 days'),
+  (8, 20, 'Completed onboarding', NOW() - INTERVAL '8 days'),
+  (8, 75, 'Bug report bounty', NOW() - INTERVAL '7 days'),
+  (8, 30, 'Social media share', NOW() - INTERVAL '6 days'),
+  (8, 40, 'Survey participation', NOW() - INTERVAL '3 days'),
+  (8, 60, 'Feature suggestion', NOW() - INTERVAL '2 days'),
+  (8, 10, 'Newsletter signup', NOW());

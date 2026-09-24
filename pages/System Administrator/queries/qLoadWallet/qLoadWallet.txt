@@ -1,0 +1,11 @@
+-- Query name: getWalletByUserId
+SELECT
+  u.first_name AS "User Name",
+  w.id        AS "ID",
+  w.balance   AS "Balance",
+  w.currency  AS "Currency",
+  w.last_transaction_date AS "Last Transaction",
+  w.user_id AS "User ID"
+FROM public.wallets w
+JOIN public.users u ON w.user_id = u.id
+WHERE u.id = {{this.params.userId}};

@@ -1,0 +1,23 @@
+-- Clear all challenge-related tables
+TRUNCATE TABLE 
+  active_challenges,
+  active_subchallenges,
+  active_subchallenge_options,
+  challenges,
+  challenge_bets,
+  challenge_comments,
+  challenge_sub_bets,
+  challenge_results,
+  challenge_sub_results,
+	challenge_payouts,
+	challenges_recent,
+	cycle_archives,
+	polling_votes,
+	polling_results,
+	polling_progress,
+  transactions
+CASCADE;
+
+UPDATE challenge_cycle_test_config
+SET batch_ids = '[]'::jsonb,
+    updated_at = NOW();

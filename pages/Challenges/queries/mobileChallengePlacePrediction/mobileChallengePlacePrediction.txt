@@ -1,0 +1,5 @@
+{
+  "challenge_id": "d5ecceae-0146-46a6-937d-a9bbc28168c7",
+  "user_id": 'dda1522f-2c44-499e-a8e5-04460b888d05',
+  "emotion": "happy"
+}

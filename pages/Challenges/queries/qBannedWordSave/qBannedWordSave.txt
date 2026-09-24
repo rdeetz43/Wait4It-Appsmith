@@ -1,0 +1,3 @@
+UPDATE banned_words
+SET word = LOWER({{tableBannedWords.updatedRow.word}})
+WHERE id = {{tableBannedWords.updatedRow.id}};

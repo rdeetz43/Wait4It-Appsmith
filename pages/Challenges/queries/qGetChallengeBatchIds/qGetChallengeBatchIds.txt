@@ -1,0 +1,2 @@
+SELECT batch_ids
+FROM challenge_cycle_test_config;

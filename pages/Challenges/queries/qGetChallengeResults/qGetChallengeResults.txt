@@ -1,0 +1,16 @@
+SELECT
+  challenge_id AS "Challenge ID",
+	winning_emotion AS "Winning Emotion",
+	resolved_at AS "Resolved At"
+FROM
+  public.challenge_results
+ORDER BY
+{{
+  (tableChallengeResults.sortOrder.column || 'challenge_id')
+  + ' ' +
+  (tableChallengeResults.sortOrder.order === "desc" ? "DESC" : "")
+}}
+LIMIT
+  {{tableChallengeResults.pageSize}}
+OFFSET
+  {{tableChallengeResults.pageOffset}}

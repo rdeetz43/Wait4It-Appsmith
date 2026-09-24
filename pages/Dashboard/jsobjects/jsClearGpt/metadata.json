@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6aaf05fd9bac554080bd71bc_0e3ca3e6-22e3-4cfb-a6e0-dc92efd93e1c",
+  "id": "Dashboard_jsClearGpt",
+  "unpublishedCollection": {
+    "name": "jsClearGpt",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

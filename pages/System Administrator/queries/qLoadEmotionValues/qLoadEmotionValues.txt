@@ -1,0 +1,1 @@
+SELECT code, label FROM emotions ORDER BY label;

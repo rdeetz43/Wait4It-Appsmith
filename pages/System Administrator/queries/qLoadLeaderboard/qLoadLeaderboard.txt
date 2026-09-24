@@ -1,0 +1,32 @@
+WITH user_leaders AS (
+    SELECT 
+        u.first_name AS user_name,
+        l.total_points,
+        l.rank AS user_rank,
+        ROW_NUMBER() OVER (ORDER BY l.total_points DESC) AS row_num
+    FROM leaderboard_view l
+    JOIN users u ON l.user_id = u.id
+),
+team_leaders AS (
+    SELECT 
+        t.name AS team_name,
+        tl.team_points,
+        tl.rank AS team_rank,
+        ROW_NUMBER() OVER (ORDER BY tl.team_points DESC) AS row_num
+    FROM team_leaderboard_view tl
+    JOIN teams t ON tl.team_id = t.id
+)
+
+SELECT 
+    u.user_name AS "User Name",
+    u.total_points AS "User Points",
+    u.user_rank AS "User Rank",
+    t.team_name AS "Team Name",
+    t.team_points AS "Team Points",
+    t.team_rank AS "Team Rank"
+FROM 
+    user_leaders u
+FULL OUTER JOIN 
+    team_leaders t ON u.row_num = t.row_num
+ORDER BY 
+    COALESCE(u.row_num, t.row_num);

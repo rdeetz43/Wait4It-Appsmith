@@ -1,0 +1,2 @@
+INSERT INTO banned_words (word)
+VALUES (LOWER({{tableBannedWords.newRow.word}}));

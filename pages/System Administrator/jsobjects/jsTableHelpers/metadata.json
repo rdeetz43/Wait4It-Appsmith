@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6aaf05fd9bac554080bd71bc_c4918f57-35a2-4501-b1f8-28b85fb13647",
+  "id": "System Administrator_jsTableHelpers",
+  "unpublishedCollection": {
+    "name": "jsTableHelpers",
+    "pageId": "System Administrator",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "fieldMap",
+        "value": "{\n  users: [\"Birthday\"],\n  teams: [\"Created On\", \"Last Updated\"],\n  subscriptions: [\"Created On\", \"Start Date\", \"End Date\"],\n  feedback: [\"Submitted On\"],\n  predictions: [\"Prediction Time\"],\n  wallets: [\"Last Transaction\"],\n  leaderboard: []\n}"
+      },
+      {
+        "name": "columnOrderMap",
+        "value": "{\n  users: [\"User Name\", \"Status\", \"User Type\", \"Online\", \"Email\", \"Address\", \"City\", \"State\", \"Zip Code\", \"Phone Number\", \"Birthday\", \"ID\"],\n  teams: [\"Team Name\", \"Description\", \"Created On\", \"Last Updated\", \"ID\"],\n  subscriptions: [\"User Name\", \"Plan\", \"Billing Cycle\", \"Status\", \"Auto-Renew\", \"Created On\", \"Start Date\", \"End Date\", \"User Id\", \"ID\"],\n  feedback: [\"User Name\", \"Comments\", \"Rating\", \"Submitted On\", \"User Id\", \"ID\"],\n  predictions: [\"User Name\", \"Social Platform\", \"Content\", \"Predicted Emotion\", \"Confidence Score\", \"Prediction Time\", \"User Id\", \"ID\"],\n  wallets: [\"User Name\", \"Balance\", \"Currency\", \"Last Transaction\", \"User ID\", \"ID\"],\n  leaderboard: [\"User Name\", \"User Rank\", \"User Points\", \"Team Name\", \"Team Rank\", \"Team Points\"]\n}"
+      }
+    ]
+  }
+}

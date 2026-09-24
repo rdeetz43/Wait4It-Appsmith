@@ -1,0 +1,5 @@
+{
+  "cycle_count": {{ Number(selChallengeCycleCount.selectedOptionValue) }},
+	"min_participants": {{ Number(selChallengeCycleMinUsers2.selectedOptionValue) }},
+	"max_participants": {{ Number(selChallengeCycleMaxUsers23423.selectedOptionValue) }}
+}

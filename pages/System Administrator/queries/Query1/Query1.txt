@@ -1,0 +1,22 @@
+sql
+WITH      
+current_week AS (         
+    SELECT COUNT(*) AS current_week_count         
+    FROM public.users         
+    WHERE public = true         
+    AND created_at >= NOW() - INTERVAL '1 week'     
+),     
+previous_week AS (         
+    SELECT COUNT(*) AS previous_week_count         
+    FROM public.users         
+    WHERE public = true         
+    AND created_at >= NOW() - INTERVAL '2 week'         
+    AND created_at < NOW() - INTERVAL '1 week'     
+) 
+SELECT      
+    current_week_count,      
+    previous_week_count,      
+    ((current_week_count - previous_week_count) * 100.0 / previous_week_count) AS percentage_change 
+FROM      
+    current_week,      
+    previous_week;

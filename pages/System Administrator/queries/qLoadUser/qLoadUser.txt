@@ -1,0 +1,4 @@
+SELECT first_name, email, birthdate AS "Birthday", phone, ssn, address, city, state, zip AS "Zip Code", facebook_url, instagram_url, tiktok_url, twitter_url, linkedin_url, reddit_url, created_at, status, user_type AS "User Type", id
+FROM public.users
+WHERE id = {{this.params.userId}}
+ORDER BY email ASC;

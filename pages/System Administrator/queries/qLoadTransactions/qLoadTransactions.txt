@@ -1,0 +1,12 @@
+SELECT t.id AS "ID",
+			 t.wallet_id,
+			 t.amount AS "Amount",
+			 t.type AS "Transaction Type",
+			 t.description AS "Description",
+			 t.transaction_date AS "Transaction Date"
+FROM 
+		public.transactions t
+JOIN 
+    public.wallets w ON t.wallet_id = w.id
+WHERE 
+    t.wallet_id = '{{this.params.wallet_id}}';

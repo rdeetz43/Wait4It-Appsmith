@@ -1,0 +1,4 @@
+{
+  "totalToPromote": {{ selChallengeTotal.selectedOptionValue }},
+  "ensureMinimumOne": {{ chkAllCategories.isSwitchedOn }}
+}

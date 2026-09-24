@@ -1,0 +1,20 @@
+SELECT
+  name AS "Name",
+	description AS "Description",
+	feeds AS "Feeds"
+FROM
+  public.challenge_categories
+ORDER BY
+{{
+  (() => {
+    const col = tableChallengesCategoryEnums.sortOrder.column;
+    const order = tableChallengesCategoryEnums.sortOrder.order;
+
+    const allowedCols = ["name", "description", "feeds"];
+
+    const safeCol = allowedCols.includes(col) ? col : "name";
+    const safeOrder = order === "desc" ? "DESC" : "";
+
+    return `${safeCol} ${safeOrder}`;
+  })()
+}}

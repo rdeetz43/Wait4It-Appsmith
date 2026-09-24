@@ -1,0 +1,75 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 90,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  String(apiChallengeGetCycleCount.data?.max_participants) ))(selChallengeCycleMaxUsers.options, selChallengeCycleMaxUsers.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "g84lzoa1co",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 32,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 89,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 59,
+  "mobileTopRow": 82,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{ apiChallengeSetCycleCount.run() }}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 90,
+  "originalTopRow": 86,
+  "parentColumnSpace": 21,
+  "parentId": "tt35d0s5kf",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 39,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n  [\n    { label: \"All users\", value: \"-1\" },\n    ..._.range(\n      0,\n      Math.min(appsmith.store.userCount, 100) + 1\n    ).map(n => ({\n      label: n,\n      value: String(n)\n    }))\n  ]\n}}",
+  "topRow": 86,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "fwok235xkr",
+  "widgetName": "selChallengeCycleMaxUsers"
+}

@@ -1,0 +1,6 @@
+SELECT *
+FROM alerts
+WHERE 
+  ({{ selAlertService.selectedOptionLabel }} = 'All')
+  OR service_name = {{ selAlertService.selectedOptionLabel }}
+ORDER BY last_seen_at DESC;

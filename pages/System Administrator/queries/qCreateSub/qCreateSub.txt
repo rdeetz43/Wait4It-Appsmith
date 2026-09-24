@@ -1,0 +1,16 @@
+INSERT INTO public.subscriptions (
+  user_id,
+  start_date,
+  auto_renew,
+	status,
+	plan,
+	billing_cycle
+)
+VALUES (
+	{{selSubUser.selectedOptionValue}},
+  {{moment.parseZone(txtSubStarted.text).format("YYYY-MM-DDTHH:mm:ssZ")}},
+	{{chkAutoRenew.isChecked}},
+	'{{selSubStatus.selectedOptionValue}}',
+  '{{selSubPlan.selectedOptionValue}}',
+	'{{selSubBilling.selectedOptionValue}}'
+);

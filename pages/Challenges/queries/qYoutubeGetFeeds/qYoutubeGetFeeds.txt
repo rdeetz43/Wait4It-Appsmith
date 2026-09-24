@@ -1,0 +1,15 @@
+SELECT COALESCE(
+  json_agg(
+    json_build_object(
+			'id', id,
+      'channel_id', channel_id,
+      'source_name', source_name,
+      'notes', notes,
+      'enabled', enabled,
+			'category', category
+    )
+  ),
+  '[]'::json
+) AS feeds
+FROM youtube_feeds
+WHERE category = '{{ this.params.category }}';

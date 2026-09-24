@@ -1,0 +1,12 @@
+INSERT INTO public.teams (
+  name,
+  description,
+  created_at,
+  updated_at
+)
+VALUES (
+  {{inpTeamName.text}},
+  {{inpTeamDesc.text}},
+  {{moment.parseZone(txtTeamCreate.text).format("YYYY-MM-DDTHH:mm:ssZ")}},
+  {{moment.parseZone(txtTeamUpdate.text).format("YYYY-MM-DDTHH:mm:ssZ")}}
+);

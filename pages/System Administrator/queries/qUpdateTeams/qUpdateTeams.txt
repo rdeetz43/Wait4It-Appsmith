@@ -1,0 +1,4 @@
+UPDATE public.teams
+SET name = '{{ inpTeamName.text }}',
+    description = '{{ inpTeamDesc.text }}'
+WHERE id = {{appsmith.store.editRow.ID}};

@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6aaf05fd9bac554080bd71bc_57588206-be24-4e3d-a6af-58c3f2a33a43",
+  "id": "Dashboard_jsAlerts",
+  "unpublishedCollection": {
+    "name": "jsAlerts",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "severityColors",
+        "value": "{\n  error: {\n    bg: \"#FDECEA\",\n    border: \"#F5C6CB\",\n    text: \"#B71C1C\",\n    badgeBg: \"#D32F2F\",\n    badgeText: \"#FFFFFF\"\n  },\n  warn: {\n    bg: \"#FFF8E1\",\n    border: \"#FFE082\",\n    text: \"#8C6D1F\",\n    badgeBg: \"#F9A825\",\n    badgeText: \"#212121\"\n  },\n  info: {\n    bg: \"#E3F2FD\",\n    border: \"#90CAF9\",\n    text: \"#0D47A1\",\n    badgeBg: \"#1976D2\",\n    badgeText: \"#FFFFFF\"\n  },\n  debug: {\n    bg: \"#F5F5F5\",\n    border: \"#E0E0E0\",\n    text: \"#616161\",\n    badgeBg: \"#9E9E9E\",\n    badgeText: \"#FFFFFF\"\n  }\n}"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      }
+    ]
+  }
+}

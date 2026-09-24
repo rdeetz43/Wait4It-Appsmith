@@ -1,0 +1,11 @@
+INSERT INTO bets
+  (id, challenge_id, user_id, team_id, emotion, stake, odds, placed_at)
+VALUES
+  ({{this.params.bet.id}},
+   {{this.params.bet.challenge_id}},
+   {{this.params.bet.user_id}},
+   {{this.params.bet.team_id}},
+   {{this.params.bet.emotion}},
+   {{this.params.bet.stake}},
+   {{this.params.bet.odds}},
+   {{this.params.bet.placed_at}});

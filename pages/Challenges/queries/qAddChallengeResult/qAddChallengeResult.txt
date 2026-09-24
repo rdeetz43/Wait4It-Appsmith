@@ -1,0 +1,7 @@
+INSERT INTO challenge_results
+  (challenge_id, winning_emotion, distribution, resolved_at)
+VALUES
+  ({{this.params.result.challenge_id}},
+   {{this.params.result.winning_emotion}},
+   {{this.params.result.distribution}},
+   {{this.params.result.resolved_at}});

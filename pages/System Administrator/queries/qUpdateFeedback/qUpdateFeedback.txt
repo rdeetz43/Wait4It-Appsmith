@@ -1,0 +1,6 @@
+UPDATE public.feedback
+SET user_id = {{selFeedUser.selectedOptionValue}},
+		rating = {{ Number(inpFeedRating.selectedOptionValue) }},
+		comments = {{inpFeedComment.text}},
+		submitted_at = {{txtFeedSubmit.text}}
+WHERE id = {{appsmith.store.editRow.ID}};

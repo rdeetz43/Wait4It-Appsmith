@@ -1,0 +1,12 @@
+INSERT INTO public.wallets (
+  user_id,
+  balance,
+  currency,
+  last_transaction_date
+)
+VALUES (
+	{{selWalletUser.selectedOptionValue}},
+  {{selWalletBalance.text}},
+  {{txtWalletCurrency.text}},
+  {{moment.parseZone(txtWalletLastTransaction).format("YYYY-MM-DDTHH:mm:ssZ")}})
+RETURNING id;

@@ -1,0 +1,7 @@
+SELECT 
+  c.name AS category_name,
+  COUNT(*) AS user_count
+FROM user_preferences p
+JOIN challenge_categories c ON c.id = p.category_id
+GROUP BY c.name
+ORDER BY user_count DESC;

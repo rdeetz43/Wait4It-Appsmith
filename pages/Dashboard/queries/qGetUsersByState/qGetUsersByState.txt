@@ -1,0 +1,6 @@
+SELECT
+  COALESCE(NULLIF(UPPER(TRIM(state::text)), ''), 'Unknown') AS state_code,
+  COUNT(*) AS cnt
+FROM users
+GROUP BY COALESCE(NULLIF(UPPER(TRIM(state::text)), ''), 'Unknown')
+ORDER BY cnt DESC;

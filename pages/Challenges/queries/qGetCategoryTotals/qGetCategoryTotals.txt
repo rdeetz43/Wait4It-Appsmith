@@ -1,0 +1,22 @@
+SELECT category, count
+FROM (
+  SELECT
+    unnest(categories) AS category,
+    COUNT(*) AS count
+  FROM challenges
+  GROUP BY category
+) AS t
+ORDER BY
+  CASE
+    WHEN category = 'Politics' THEN 1
+    WHEN category = 'Sports' THEN 2
+    WHEN category = 'Entertainment' THEN 3
+    WHEN category = 'Tech' THEN 4
+    WHEN category = 'Music' THEN 5
+    WHEN category = 'Gaming' THEN 6
+    WHEN category = 'Finance' THEN 7
+    WHEN category = 'Health' THEN 8
+    WHEN category = 'Fashion' THEN 9
+    WHEN category = 'Memes' THEN 10
+    ELSE 99
+  END;

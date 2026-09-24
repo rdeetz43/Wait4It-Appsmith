@@ -1,0 +1,7 @@
+SELECT
+  id,
+  question_text,
+  sequence
+FROM active_subchallenges
+WHERE active_challenge_id = '{{this.params.challenge_id}}'
+ORDER BY sequence ASC;

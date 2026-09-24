@@ -1,0 +1,6 @@
+SELECT t.id AS "ID",
+			 t.name AS "Team Name",
+			 t.description AS "Description",
+			 t.created_at AS "Created On",
+			 t.updated_at AS "Last Updated"
+FROM public.teams t

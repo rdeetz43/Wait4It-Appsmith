@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 41,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "4sfiobih32",
+  "leftColumn": 12,
+  "minWidth": 120,
+  "mobileBottomRow": 41,
+  "mobileLeftColumn": 12,
+  "mobileRightColumn": 28,
+  "mobileTopRow": 37,
+  "needsErrorInfo": false,
+  "onClick": "{{\n    (() => {\n        const service = 'ingest';\n        const status = apiServiceStatus.data?.[service]?.status;\n        const action = status === \"stopped\" ? \"start\" : \"restart\";\n\n        return apiServiceStopStart.run({\n            service: service,\n            action: action\n        }).then(() => {\n            showAlert(\n                (action === \"start\" ? \"Starting \" : \"Restarting \") + service + \"...\",\n                \"info\"\n            );\n            apiServiceStatus.run();\n        });\n    })()\n}}",
+  "originalBottomRow": 41,
+  "originalTopRow": 37,
+  "parentColumnSpace": 6.77734375,
+  "parentId": "8n1uwtgbrg",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 28,
+  "text": "{{ apiServiceStatus.data.ingest.status === \"stopped\" ? \"Start\" : \"Restart\" }}",
+  "topRow": 37,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "d1ibcjkex2",
+  "widgetName": "Button2Copy"
+}

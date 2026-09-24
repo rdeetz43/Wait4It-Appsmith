@@ -1,0 +1,5 @@
+UPDATE public.wallets
+SET user_id = {{selWalletUser.selectedOptionValue}},
+    currency = '{{txtWalletCurrency.text}}',
+    balance = '{{selWalletBalance.text}}'
+WHERE id = {{appsmith.store.editRow.ID}};

@@ -1,0 +1,3 @@
+UPDATE public."polling_challenges" 
+SET updated_at = NOW()
+WHERE id = {{appsmith.store.subchallengeRow.id}};

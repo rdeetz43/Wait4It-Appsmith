@@ -1,0 +1,4 @@
+{
+  "rssBatchId": "{{ appsmith.store.rssBatchId }}",
+  "pollBatchId": "{{ appsmith.store.pollBatchId }}"
+}

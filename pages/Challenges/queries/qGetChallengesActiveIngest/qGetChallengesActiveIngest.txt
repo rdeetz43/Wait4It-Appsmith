@@ -1,0 +1,14 @@
+WITH ranked_challenges AS (
+  SELECT
+    id,
+    status
+  FROM
+    public.challenges
+)
+SELECT
+  id,
+  status
+FROM
+  ranked_challenges
+WHERE
+  status = 'active';

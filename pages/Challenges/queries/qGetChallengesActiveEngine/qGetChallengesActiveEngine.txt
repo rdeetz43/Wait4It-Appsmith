@@ -1,0 +1,35 @@
+SELECT
+  c.id,
+  c.topic AS "Topic",
+  c.snippet AS "Snippet",
+  c.source AS "Source",
+  c.created_at AS "Create Date",
+  c.categories[1] AS "Categories",
+  c.popularity_score AS "Popularity",
+  c.status AS "Status",
+  c.url AS "URL",
+  c.image_url AS "Image URL",
+  c.quote AS "Quote",
+  c.stat AS "Stat",
+
+  -- NEW: attach subchallenges from active_subchallenges
+  COALESCE(
+    (
+      SELECT json_agg(
+        json_build_object(
+          'id', acs.id,
+          'question_text', acs.question_text,
+          'sequence', acs.sequence,
+          'options', acs.options,
+          'created_at', acs.created_at
+        )
+        ORDER BY acs.sequence ASC
+      )
+      FROM public.active_subchallenges acs
+      WHERE acs.promoted_challenge_id = c.ingest_challenge_id
+    ),
+    '[]'::json
+  ) AS "Subchallenges"
+
+FROM public.active_challenges c
+ORDER BY "Popularity" DESC;

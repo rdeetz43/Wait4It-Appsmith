@@ -1,0 +1,9 @@
+UPDATE youtube_feeds
+SET
+  channel_id = {{ this.params.channel_id }},
+  source_name = {{ this.params.source_name }},
+  notes = {{ this.params.notes }},
+  enabled = {{ this.params.enabled }},
+  category = {{ this.params.category }},
+  updated_at = NOW()
+WHERE id = {{ this.params.id }};

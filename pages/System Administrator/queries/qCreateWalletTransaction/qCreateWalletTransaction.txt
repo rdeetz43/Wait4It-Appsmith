@@ -1,0 +1,2 @@
+INSERT INTO public.transactions (wallet_id, amount, type, transaction_date, description)
+VALUES ({{this.params.wallet_id}}, {{this.params.amount}}, '{{this.params.type}}', '{{this.params.date}}', '{{this.params.desc}}');

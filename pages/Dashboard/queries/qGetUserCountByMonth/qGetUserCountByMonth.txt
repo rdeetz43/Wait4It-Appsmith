@@ -1,0 +1,7 @@
+SELECT
+  TO_CHAR(DATE_TRUNC('month', created_at), 'YYYY-MM') AS month,
+  COUNT(*) AS user_count
+FROM users
+WHERE created_at IS NOT NULL
+GROUP BY DATE_TRUNC('month', created_at)
+ORDER BY DATE_TRUNC('month', created_at);

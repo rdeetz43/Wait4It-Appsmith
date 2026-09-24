@@ -1,0 +1,6 @@
+{
+  "challenge_id": "{{this.params.challenge_id}}",
+  "user_id": "{{this.params.user_id}}",
+  "emotion": {{this.params.emotion}}, 
+  "sub_bets": {{this.params.sub_bets}}
+}

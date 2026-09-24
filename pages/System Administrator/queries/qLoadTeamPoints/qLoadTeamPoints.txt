@@ -1,0 +1,3 @@
+SELECT SUM(points) AS value
+FROM team_points
+WHERE team_id = '{{this.params.team_id}}';

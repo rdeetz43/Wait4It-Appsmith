@@ -1,0 +1,4 @@
+UPDATE public."gpt_prompts"
+SET template = {{ this.params.template }}
+WHERE prompt_key = {{this.params.type}} || '.' || {{this.params.category}}
+RETURNING *;

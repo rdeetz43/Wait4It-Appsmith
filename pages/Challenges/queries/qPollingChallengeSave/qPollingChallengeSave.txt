@@ -1,0 +1,30 @@
+UPDATE public.polling_challenges
+SET 
+  active = {{ switchPollEnabled.isSwitchedOn }},
+  use_gpt = {{ switchPollEnableGpt.isSwitchedOn }},
+  name = {{ inpPollName.text }},
+  question_text = '{{ selPollQuestion.text }}',
+  category = '{{ selPollCategory.selectedOptionValue }}',
+  image_url = '{{ appsmith.store.pollingChallengeImageUrl }}',
+  meta_text = '{{ inpPollMeta.text }}',
+  seasonal_start = 
+    CASE 
+      WHEN {{ datePollStart.selectedDate === "" }} THEN NULL
+      ELSE to_timestamp({{ datePollStart.selectedDate }}, 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"')::date
+    END,
+  seasonal_end = 
+    CASE 
+      WHEN {{ datePollEnd.selectedDate === "" }} THEN NULL
+      ELSE to_timestamp({{ datePollEnd.selectedDate }}, 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"')::date
+    END,
+options = {{
+  JSON.stringify(
+    [
+      inpPollPred1.text || "",
+      inpPollPred2.text || "",
+      inpPollPred3.text || "",
+      inpPollPred4.text || ""
+    ].filter(v => v && v.trim().length > 0)
+  ) || '[]'
+}}::jsonb
+WHERE id = '{{ appsmith.store.pollingChallengeRow.id }}';

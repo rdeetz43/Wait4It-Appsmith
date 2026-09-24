@@ -1,0 +1,12 @@
+INSERT INTO public.feedback (
+  user_id,
+  rating,
+  comments,
+  submitted_at
+)
+VALUES (
+	{{selFeedUser.selectedOptionValue}},
+  {{inpFeedRating.selectedOptionValue}},
+  {{inpFeedComment.text}},
+  {{moment.parseZone(txtFeedSubmit.text).format("YYYY-MM-DDTHH:mm:ssZ")}}
+);

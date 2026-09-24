@@ -1,0 +1,7 @@
+{
+	"user_id": "dda1522f-2c44-499e-a8e5-04460b888d05",
+  "challenge_id": "9fc67039-4a3f-4422-a4d9-5ea502447f39",
+  "subchallenge_id": "8234a83f-6717-4b8c-8db1-42aa15c4c5ad",
+  "option_text": "Test option",
+  "dont_ask_again": false
+}

@@ -1,0 +1,3 @@
+SELECT balance
+FROM public.wallets
+WHERE user_id = {{this.params.userId}}

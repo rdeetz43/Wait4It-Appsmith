@@ -1,0 +1,8 @@
+SELECT 
+    column_name AS "Column",
+    data_type AS "Type",
+    is_nullable AS "Null",
+    column_default AS "Default"
+FROM information_schema.columns
+WHERE table_name = '{{ tableCustomQuery.selectedRow["Table"] }}'
+ORDER BY ordinal_position;

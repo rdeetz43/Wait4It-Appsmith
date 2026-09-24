@@ -1,0 +1,10 @@
+UPDATE challenge_categories
+SET feeds = (
+  SELECT jsonb_agg(feed)
+  FROM jsonb_array_elements(feeds) AS feed
+  WHERE NOT (
+    feed->>'url' = {{this.params.url}}
+    AND feed->>'source' = {{this.params.source}}
+  )
+)
+WHERE name = {{this.params.category}};

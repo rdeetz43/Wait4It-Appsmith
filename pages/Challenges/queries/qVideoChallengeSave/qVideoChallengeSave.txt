@@ -1,0 +1,17 @@
+UPDATE public.challenge_videos
+SET 
+  enabled = {{ !!switchVideoEnabled?.isSwitchedOn }},
+	category = '{{ selVideoCategory.selectedOptionValue }}',
+  url = {{ inpVideoUrl.text }},
+  image_url = {{ inpThumbnailUrl.text }},
+	topic =  {{ inpVideoTopic.text }},
+	snippet =  {{ inpVideoSnippet.text }},
+  question = '{{ inpVideoQuestion.text }}',
+  answer_a = '{{ inpVideoPred1.text }}',
+  answer_b = '{{ inpVideoPred2.text }}',
+  answer_c = '{{ inpVideoPred3.text }}',
+  answer_d = '{{ inpVideoPred4.text }}',
+	correct_answer = '{{ selCorrectAnswer.selectedOptionValue }}',
+	source_platform = '{{ selVideoPlatform.selectedOptionValue }}',
+	pause_timestamp = '{{ inpPauseTime.text.replace(":", "\\:") }}'
+WHERE id = '{{ appsmith.store.videoChallengeRow.id }}';
