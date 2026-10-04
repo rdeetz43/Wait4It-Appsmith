@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 16,
   "boxShadow": "none",
-  "defaultText": "{{qVideoChallengeGet.data[0].image_url}}",
+  "defaultText": "{{ \nqVideoChallengeGet.data[0].image_url\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -32,7 +32,7 @@
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 18,
+  "leftColumn": 14,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -47,7 +47,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 38,
+  "rightColumn": 43,
   "showStepArrows": false,
   "topRow": 12,
   "type": "INPUT_WIDGET_V2",

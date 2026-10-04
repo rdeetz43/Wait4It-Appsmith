@@ -1,7 +1,18 @@
 export default {
+  async enableAllVideos() {
+		await	qVideoEnableAll.run();
+		await	qVideoChallengeGetAll.run();
+  },
+	
+  async disableAllVideos() {
+		await	qVideoDisableAll.run();
+		await	qVideoChallengeGetAll.run();
+  },
+	
 	async createNewVideoChallenge() {
 		await storeValue("videoChallengeRow", null);
 		inpVideoUrl.setValue("");
+		inpThumbnailUrl.setValue("");
 		inpVideoQuestion.setValue("");
 		inpVideoTopic.setValue("");
 		inpVideoSnippet.setValue("");
@@ -12,7 +23,7 @@ export default {
 		inpPauseTime.setValue("");
 		switchVideoEnabled = true;
 		selCorrectAnswer.setSelectedOption(0);
-		selVideoPlatform.setSelectedOption(0);
+		selVideoPlatform.setSelectedOption('tiktok');
 		selVideoCategory.setSelectedOption(0);
 		showModal(modalVideoChallenges.name);
 	},
@@ -30,30 +41,29 @@ export default {
 		showModal(modalVideoChallenges.name);
 	},
 
-async saveVideoChallenge() {
-    try {
-        if (appsmith.store.videoChallengeRow) {
-            await qVideoChallengeSave.run();
-            showAlert("Video challenge updated!", "success");
-        } else {
-            const result = await qVideoChallengeCreate.run();
-            await storeValue("videoChallengeRow", result[0]);
-            showAlert("Video challenge created!", "success");
-        }
-    } catch (e) {
-        showAlert("Save failed: " + e.message, "error");
-        console.log("saveVideoChallenge error:", e);
-    }
+	async saveVideoChallenge() {
+		try {
+			if (appsmith.store.videoChallengeRow) {
+				await qVideoChallengeSave.run();
+				showAlert("Video challenge updated!", "success");
+			} else {
+				const result = await qVideoChallengeCreate.run();
+				await storeValue("videoChallengeRow", result[0]);
+				showAlert("Video challenge created!", "success");
+			}
+		} catch (e) {
+			showAlert("Save failed: " + e.message, "error");
+			console.log("saveVideoChallenge error:", e);
+		}
 
-    if (qVideoChallengeGetAll?.run) {
-        await qVideoChallengeGetAll.run();
-    }
+		if (qVideoChallengeGetAll?.run) {
+			await qVideoChallengeGetAll.run();
+		}
 
-    setTimeout(() => {
-        closeModal(modalVideoChallenges.name);
-    }, 50);
-},
-
+		setTimeout(() => {
+			closeModal(modalVideoChallenges.name);
+		}, 50);
+	},
 
   async deleteVideoChallenge() {
 		try {
@@ -66,59 +76,42 @@ async saveVideoChallenge() {
 			console.log("deleteVideoChallenge error:", e);
 		}
   },
-	
-	async uploadVideoThumbnail2() {
-		const videoUrl = inpVideoUrl.text;
-		if (!videoUrl) {
-			showAlert("No TikTok video URL provided", "error");
+
+	async uploadVideoThumbnail() {
+		const file = pickerSaveVideoImage.files[0];
+		if (!file) {
+			showAlert("No image selected", "error");
 			return;
 		}
 
 		try {
-			// 1. Fetch TikTok oEmbed metadata
-			const oembedUrl = `https://www.tiktok.com/oembed?url=${encodeURIComponent(videoUrl)}`;
-			const metaRes = await fetch(oembedUrl);
-
-			if (!metaRes.ok) {
-				showAlert("Failed to fetch TikTok metadata", "error");
-				return;
-			}
-
-			const meta = await metaRes.json();
-			const thumbnailUrl = meta.thumbnail_url;
-
-			if (!thumbnailUrl) {
-				showAlert("TikTok returned no thumbnail", "error");
-				return;
-			}
-
-			// 2. Store values for backend
-			await storeValue("videoThumbnailFileUrl", thumbnailUrl);
 			await storeValue("videoChallengeId", appsmith.store.videoChallengeRow.id);
 
-			// 3. Call backend upload
 			const result = await apiUploadVideoChallengeImage.run();
-
 			if (!result || !result.url) {
 				showAlert("Backend failed to upload thumbnail", "error");
 				return;
 			}
 
-			// 4. Cache-busted URL
 			const version = appsmith.store.videoChallengeRow.updated_at;
-			const finalUrl = `${result.url}?v=${version}`;
 
-			// 5. Store final URL
+			// ⭐ FIX: add a random cache-buster
+			const finalUrl = `${result.url}?v=${version}&u=${Math.random()}`;
+
+			// FIX: delay widget update by one microtask
+			setTimeout(() => {
+				inpThumbnailUrl.setValue(finalUrl);
+			}, 0);
+
 			await storeValue("videoThumbnailUrl", finalUrl);
 
-			showAlert("Thumbnail uploaded", "success");
-
+			showAlert("Thumbnail uploaded:" + finalUrl, "success");
 		} catch (err) {
-			console.log(err);
-			showAlert("Error uploading TikTok thumbnail", "error");
+			console.log("Thumbnail upload error:", err);
+			showAlert(`Thumbnail upload failed: ${err?.message || "Unknown error"}`, "error");
 		}
 	},
-	
+
 	async uploadVideoChallengeImage(metaIndex = 0) {
 		const file = pickerMetaImage.files[0];   // main image
 		if (!file) {

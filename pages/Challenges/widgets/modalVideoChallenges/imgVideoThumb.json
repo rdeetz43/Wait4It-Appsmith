@@ -1,0 +1,42 @@
+{
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 61,
+  "boxShadow": "none",
+  "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "image"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "enableDownload": false,
+  "enableRotation": false,
+  "flexVerticalAlignment": "start",
+  "image": "{{ inpThumbnailUrl.text + new Date().toISOString() }}",
+  "imageShape": "RECTANGLE",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0mim8qon1f",
+  "leftColumn": 46,
+  "maxZoomLevel": 1,
+  "mobileBottomRow": 52,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 59,
+  "mobileTopRow": 40,
+  "needsErrorInfo": false,
+  "objectFit": "contain",
+  "parentColumnSpace": 20.5625,
+  "parentId": "1rqg012lnc",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 58,
+  "topRow": 48,
+  "type": "IMAGE_WIDGET",
+  "version": 1,
+  "widgetId": "my6infjmsf",
+  "widgetName": "imgVideoThumb"
+}

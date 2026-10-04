@@ -1,0 +1,2 @@
+UPDATE public.challenge_videos
+SET enabled = true;

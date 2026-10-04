@@ -17,7 +17,7 @@ INSERT INTO public.challenge_videos (
 VALUES (
   {{ switchVideoEnabled.isSwitchedOn }},
   '{{ inpVideoUrl.text }}',
-  split_part('{{ inpVideoUrl.text }}', '/video/', 2),
+  '{{ inpVideoUrl.text.match(/[0-9]{8,}/g)?.pop() }}',
   '{{ inpThumbnailUrl.text }}',
   '{{ inpVideoTopic.text }}',
   '{{ inpVideoSnippet.text }}',

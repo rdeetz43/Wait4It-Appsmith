@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.challenge_videos (\n  enabled,\n  url,\n  source_video_id,\n  image_url,\n  topic,\n  snippet,\n  question,\n  category,\n  answer_a,\n  answer_b,\n  answer_c,\n  answer_d,\n  correct_answer,\n  pause_timestamp\n)\nVALUES (\n  {{ switchVideoEnabled.isSwitchedOn }},\n  '{{ inpVideoUrl.text }}',\n  split_part('{{ inpVideoUrl.text }}', '/video/', 2),\n  '{{ inpThumbnailUrl.text }}',\n  '{{ inpVideoTopic.text }}',\n  '{{ inpVideoSnippet.text }}',\n  '{{ inpVideoQuestion.text }}',\n  '{{ selVideoCategory.selectedOptionValue }}',\n  '{{ inpVideoPred1.text }}',\n  '{{ inpVideoPred2.text }}',\n  '{{ inpVideoPred3.text }}',\n  '{{ inpVideoPred4.text }}',\n  '{{ selCorrectAnswer.selectedOptionValue }}',\n  '{{ inpPauseTime.text }}'\n)\nRETURNING id;",
+      "body": "INSERT INTO public.challenge_videos (\n  enabled,\n  url,\n  source_video_id,\n  image_url,\n  topic,\n  snippet,\n  question,\n  category,\n  answer_a,\n  answer_b,\n  answer_c,\n  answer_d,\n  correct_answer,\n  pause_timestamp\n)\nVALUES (\n  {{ switchVideoEnabled.isSwitchedOn }},\n  '{{ inpVideoUrl.text }}',\n  '{{ inpVideoUrl.text.match(/[0-9]{8,}/g)?.pop() }}',\n  '{{ inpThumbnailUrl.text }}',\n  '{{ inpVideoTopic.text }}',\n  '{{ inpVideoSnippet.text }}',\n  '{{ inpVideoQuestion.text }}',\n  '{{ selVideoCategory.selectedOptionValue }}',\n  '{{ inpVideoPred1.text }}',\n  '{{ inpVideoPred2.text }}',\n  '{{ inpVideoPred3.text }}',\n  '{{ inpVideoPred4.text }}',\n  '{{ selCorrectAnswer.selectedOptionValue }}',\n  '{{ inpPauseTime.text }}'\n)\nRETURNING id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
